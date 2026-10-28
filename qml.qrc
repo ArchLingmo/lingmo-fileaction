@@ -1,0 +1,18 @@
+<RCC>
+    <qresource prefix="/">
+        <file>qml/Shell.qml</file>
+        <file>qml/Wheel.qml</file>
+        <file>qml/ParamDialog.qml</file>
+        <file>qml/WheelRing.qml</file>
+        <file>qml/Settings.qml</file>
+        <file>qml/settings/SettingRow.qml</file>
+        <file>qml/settings/PageScroll.qml</file>
+        <file>qml/settings/GeneralPage.qml</file>
+        <file>qml/settings/GesturesPage.qml</file>
+        <file>qml/settings/WheelsPage.qml</file>
+        <file>qml/settings/QualityPage.qml</file>
+        <file>qml/settings/HelpersPage.qml</file>
+        <file>qml/settings/AboutPage.qml</file>
+        <file>icons/lingmo-fileaction.svg</file>
+    </qresource>
+</RCC>

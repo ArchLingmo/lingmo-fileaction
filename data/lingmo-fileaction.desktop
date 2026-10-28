@@ -1,0 +1,33 @@
+[Desktop Entry]
+Type=Application
+Name=File actions
+Name[pt_BR]=Ações de arquivo
+GenericName=File converter
+GenericName[pt_BR]=Conversor de arquivos
+Comment=Convert files by dropping them on a wheel: drag a file and tap Shift, Ctrl or Alt
+Comment[pt_BR]=Converta arquivos soltando-os numa roda: arraste um arquivo e toque Shift, Ctrl ou Alt
+Exec=lingmo-fileaction %F
+Icon=lingmo-fileaction
+Terminal=false
+Categories=Utility;FileTools;
+Keywords=convert;converter;image;video;audio;pdf;webp;mp3;gif;compress;resize;conversion;FileAction;FileActions;file actions;
+Keywords[pt_BR]=converter;conversão;imagem;vídeo;áudio;pdf;webp;mp3;gif;comprimir;redimensionar;FileAction;FileActions;ações de arquivo;
+StartupNotify=false
+NoDisplay=false
+X-Lingmo-Intents=files.convert;files.compress;files.actions.list;
+Actions=Keyboard;Settings;About;
+
+[Desktop Action Keyboard]
+Name=Selected or copied files (Meta+Shift+A)
+Name[pt_BR]=Arquivos selecionados ou copiados (Meta+Shift+A)
+Exec=lingmo-fileaction --keyboard
+
+[Desktop Action Settings]
+Name=Settings
+Name[pt_BR]=Configurações
+Exec=lingmo-fileaction --settings
+
+[Desktop Action About]
+Name=About
+Name[pt_BR]=Sobre
+Exec=lingmo-fileaction --about

@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#4f9bff"/>
+      <stop offset="1" stop-color="#2463eb"/>
+    </linearGradient>
+  </defs>
+  <rect x="8" y="8" width="112" height="112" rx="26" fill="url(#bg)"/>
+  <g fill="#ffffff">
+    <!-- the wheel: four slices around a hub -->
+    <path d="M64 22 A42 42 0 0 1 103.5 49.6 L82.8 57.2 A20 20 0 0 0 64 44 Z" opacity="0.95"/>
+    <path d="M103.5 78.4 A42 42 0 0 1 64 106 L64 84 A20 20 0 0 0 82.8 70.8 Z" opacity="0.7"/>
+    <path d="M64 106 A42 42 0 0 1 24.5 78.4 L45.2 70.8 A20 20 0 0 0 64 84 Z" opacity="0.55"/>
+    <path d="M24.5 49.6 A42 42 0 0 1 64 22 L64 44 A20 20 0 0 0 45.2 57.2 Z" opacity="0.8"/>
+  </g>
+  <!-- a document with a folded corner in the hub -->
+  <path d="M57 54 h9 l6 6 v14 h-15 z" fill="#ffffff"/>
+  <path d="M66 54 v6 h6" fill="#cfe0ff"/>
+</svg>

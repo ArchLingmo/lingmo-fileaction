@@ -1,0 +1,90 @@
+{
+  "format": "lingmo-intents",
+  "version": 1,
+  "app": "lingmo-fileaction",
+  "name": {"en": "File actions", "pt_BR": "Ações de arquivo"},
+  "icon": "lingmo-fileaction",
+  "desktop": "lingmo-fileaction.desktop",
+  "dbus": {"service": "com.lingmo.FileAction", "path": "/Intents"},
+  "intents": [
+    {
+      "id": "files.convert",
+      "title": {"en": "Convert file", "pt_BR": "Converter arquivo"},
+      "description": {"en": "Converts a file to another format (image, audio, video, PDF, document, spreadsheet, subtitles, archive). The result is saved next to the original with a new name; the original is never changed. Runs on this computer.",
+                      "pt_BR": "Converte um arquivo para outro formato (imagem, áudio, vídeo, PDF, documento, planilha, legenda, arquivo compactado). O resultado é salvo ao lado do original com um nome novo; o original nunca é alterado. Roda neste computador."},
+      "summary": {"en": "Convert {file} to {to}", "pt_BR": "Converter {file} para {to}"},
+      "icon": "lingmo-fileaction",
+      "capabilities": ["create"],
+      "needsUI": false,
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "file": {"type": "string", "format": "file", "title": {"en": "File", "pt_BR": "Arquivo"}},
+          "to": {"type": "string", "minLength": 2, "maxLength": 10, "pattern": "^\\.?[A-Za-z0-9.]+$",
+                 "title": {"en": "Format", "pt_BR": "Formato"},
+                 "description": {"en": "Target format, e.g. webp, jpg, png, pdf, mp3, mp4, gif, docx, xlsx, csv, zip",
+                                 "pt_BR": "Formato de destino, ex.: webp, jpg, png, pdf, mp3, mp4, gif, docx, xlsx, csv, zip"}}
+        },
+        "required": ["file", "to"]
+      },
+      "result": {"type": "object", "properties": {
+        "output": {"type": "string", "title": {"en": "Result", "pt_BR": "Resultado"}},
+        "outputs": {"type": "string", "title": {"en": "All results", "pt_BR": "Todos os resultados"}}
+      }},
+      "examples": {
+        "pt_BR": ["converter {file} para {to}", "transformar {file} em {to}", "converter para {to}"],
+        "en": ["convert {file} to {to}", "turn {file} into {to}", "convert to {to}"]
+      }
+    },
+    {
+      "id": "files.compress",
+      "title": {"en": "Compress file", "pt_BR": "Comprimir arquivo"},
+      "description": {"en": "Makes a smaller copy of an image, video, audio file or PDF next to the original. The original is never changed.",
+                      "pt_BR": "Faz uma cópia menor de uma imagem, vídeo, áudio ou PDF ao lado do original. O original nunca é alterado."},
+      "summary": {"en": "Compress {file}", "pt_BR": "Comprimir {file}"},
+      "icon": "lingmo-fileaction",
+      "capabilities": ["create"],
+      "needsUI": false,
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "file": {"type": "string", "format": "file", "title": {"en": "File", "pt_BR": "Arquivo"}}
+        },
+        "required": ["file"]
+      },
+      "result": {"type": "object", "properties": {
+        "output": {"type": "string", "title": {"en": "Result", "pt_BR": "Resultado"}},
+        "outputs": {"type": "string", "title": {"en": "All results", "pt_BR": "Todos os resultados"}}
+      }},
+      "examples": {
+        "pt_BR": ["comprimir {file}", "diminuir o tamanho de {file}", "deixar {file} menor"],
+        "en": ["compress {file}", "make {file} smaller", "shrink {file}"]
+      }
+    },
+    {
+      "id": "files.actions.list",
+      "title": {"en": "What can be done with a file", "pt_BR": "O que dá para fazer com um arquivo"},
+      "description": {"en": "Lists the formats a file can be converted to and the tools available for it (compress, rotate, trim, merge…).",
+                      "pt_BR": "Lista os formatos para os quais um arquivo pode ser convertido e as ferramentas disponíveis para ele (comprimir, girar, cortar, juntar…)."},
+      "summary": {"en": "What can be done with {file}", "pt_BR": "O que dá para fazer com {file}"},
+      "icon": "lingmo-fileaction",
+      "capabilities": ["read"],
+      "needsUI": false,
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "file": {"type": "string", "format": "file", "title": {"en": "File", "pt_BR": "Arquivo"}}
+        },
+        "required": ["file"]
+      },
+      "result": {"type": "object", "properties": {
+        "formats": {"type": "string", "title": {"en": "Formats", "pt_BR": "Formatos"}},
+        "tools": {"type": "string", "title": {"en": "Tools", "pt_BR": "Ferramentas"}}
+      }},
+      "examples": {
+        "pt_BR": ["para quais formatos posso converter {file}", "o que dá para fazer com {file}"],
+        "en": ["what can I convert {file} to", "what can I do with {file}"]
+      }
+    }
+  ]
+}

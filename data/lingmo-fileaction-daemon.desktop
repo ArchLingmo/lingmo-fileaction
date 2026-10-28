@@ -1,0 +1,12 @@
+[Desktop Entry]
+Type=Application
+Name=File actions (drag gesture)
+Name[pt_BR]=Ações de arquivo (gesto de arrastar)
+Comment=While dragging a file, tap Shift, Ctrl or Alt to open the conversion wheel
+Comment[pt_BR]=Enquanto arrasta um arquivo, toque Shift, Ctrl ou Alt para abrir a roda de conversão
+Exec=lingmo-fileaction --daemon
+Icon=lingmo-fileaction
+Terminal=false
+NoDisplay=true
+X-GNOME-Autostart-Phase=Applications
+X-KDE-autostart-phase=2
